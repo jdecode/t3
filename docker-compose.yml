@@ -1,0 +1,23 @@
+version : "3"
+services:
+  vuer-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vuer-app
+    volumes:
+      - .:/var/www/html
+    restart: always
+    ports:
+      - "3000:3000"
+    networks:
+      vuer-app-network:
+        ipv4_address: 220.30.1.1
+
+# Local network for services running using this docker-compose config
+networks:
+  vuer-app-network:
+    ipam:
+      driver: default
+      config:
+        - subnet: 220.30.0.0/16
