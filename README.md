@@ -1,35 +1,25 @@
-# vuer
+Note : Regarding the choice of OS (it's not a "preference", it's a derivative of the work you do)
+1. If you create mobile apps that need to be deployed to App Store (Apple) - then use "Mac OS"
+1. If you create applications (desktop/web) that need to be deployed to Windows, or require DLL/MS-libraries (e.g. C#/.Net core) - then use "Windows"
+1. If you are into web-dev, using Java, Python, PHP, React, Vue, TailwindCSS, Alpinejs, Docker etc - then use any popular Linux distro, e.g. Ubuntu [or Fedora / Debian / CentOS etc]
+   1. If you are into non-window-binding and non-mac-os-binding web-dev, and use Windows - then change your career or the OS
 
-This template should help get you started developing with Vue 3 in Vite.
+### Prerequisites
+1. `git` [To clone this repo]
+1. `docker`
+1. `docker-compose`
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
+### Build docker image, and run in detached mode; and connect to the container
 ```sh
-npm install
+docker-compose up --build -d && docker-compose exec vuer-app bash
 ```
 
-### Compile and Hot-Reload for Development
-
+### Install packages. compile for production, and run the server
 ```sh
-npm run dev
+npm install && npm run build && npm run dev
 ```
 
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
+#### Lint with [ESLint](https://eslint.org/) *as and when needed*
 ```sh
 npm run lint
 ```
