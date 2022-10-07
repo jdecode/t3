@@ -53,21 +53,25 @@ defineProps({
 
 <style scoped>
 div.india_talks span {
-  animation: move_words 15s infinite;
+  animation-delay: 5s;
+  animation-name: move_words;
+  animation-iteration-count: infinite;
+  animation-duration: 15s;
 }
 
 @keyframes move_words {
   0% { transform: translateY(0%); }
-  10% { transform: translateY(-115%); }
-  20% { transform: translateY(-230%); }
-  30% { transform: translateY(-345%); }
-  40% { transform: translateY(-460%); }
-  50% { transform: translateY(-575%); }
-  60% { transform: translateY(-700%); }
-  70% { transform: translateY(-820%); }
-  80% { transform: translateY(-935%); }
-  90% { transform: translateY(-1045%); }
-  100% { transform: translateY(-1160%); }
+  5% { transform: translateY(-115%); }
+  10% { transform: translateY(-230%); }
+  15% { transform: translateY(-345%); }
+  20% { transform: translateY(-460%); }
+  25% { transform: translateY(-575%); }
+  30% { transform: translateY(-700%); }
+  35% { transform: translateY(-820%); }
+  40% { transform: translateY(-935%); }
+  45% { transform: translateY(-1045%); }
+  50% { transform: translateY(-1165%); }
+  100% { transform: translateY(-1165%); }
 }
 
 </style>
